@@ -1,0 +1,53 @@
+### LIST CATEGORIES
+
+GET http://localhost:8080/category HTTP/1.1
+Host: localhost:8080
+Content-type: application/json
+
+### SHOW CATEGORY BY ID
+
+GET http://localhost:8080/category/2ef0aa59-da8e-4c1f-93a9-0e5d06a0c2ca HTTP/1.1
+Host: localhost:8080
+Content-type: application/json
+
+### CREATE CATEGORY
+
+POST http://localhost:8080/category HTTP/1.1
+Host: localhost:8080
+Content-type: application/json
+
+{
+    "name": "Category 1"
+}
+
+### LIST PRODUCTS
+
+GET http://localhost:8080/product HTTP/1.1
+Host: localhost:8080
+Content-type: application/json
+
+### SHOW PRODUCT BY ID
+
+GET http://localhost:8080/product/202dda9d-bf18-4bbe-a902-d5b56e4c3e2d HTTP/1.1
+Host: localhost:8080
+Content-type: application/json
+
+### SHOW PRODUCT BY CATEGORY ID
+
+GET http://localhost:8080/product/category/2ef0aa59-da8e-4c1f-93a9-0e5d06a0c2ca HTTP/1.1
+Host: localhost:8080
+Content-type: application/json
+
+### CREATE PRODUCT
+
+POST http://localhost:8080/product HTTP/1.1
+Host: localhost:8080
+Content-type: application/json
+
+{
+    "name": "Product 1",
+    "description": "Product 1 description",
+    "price": 100,
+    "image_url": "https://www.google.con",
+    "category_id": "2ef0aa59-da8e-4c1f-93a9-0e5d06a0c2ca"
+}
